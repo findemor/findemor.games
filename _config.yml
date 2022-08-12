@@ -56,7 +56,7 @@ permalink: /game/:title
 collections:
   projects:
     output: true
-    permalink: /games/:name
+    permalink: /projects/:name
   elements:                                             # For Documentation Only
     output: true                                        # For Documentation Only
 
@@ -87,7 +87,7 @@ buymeacoffee:
 defaults:
   - scope:
       path: ""
-      type: "games"
+      type: "projects"
     values:
       layout: "page"
   - scope:                                              # For Documentation Only
