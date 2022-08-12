@@ -4,4 +4,4 @@ permalink: /
 weight: 1
 ---
 
-{% include projects/index.html %}
+{% include projects/index.html %} 
