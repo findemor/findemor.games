@@ -18,6 +18,8 @@ nav_exclude:                                            # The following paths ar
   - pages/tags.html
   - pages/404.html
   - pages/index.md
+  - pages/about.md
+  - pages/blog.html
   - documentation/partials/**                           # For Documentation Only
 
 
@@ -29,20 +31,20 @@ author:
 # dribbble          : your_username
 # email             : username@domain.com
 #  facebook          : your_username
-  github            : findemor
+#  github            : findemor
 # gitlab            : your_username
 # instagram         : your_username
 # kaggle            : your_username
-  linkedin          : findemor
+#  linkedin          : findemor
 # medium            : your_username
 # soundcloud        : your_username
 # spotify           : your_username
 # stackoverflow     : your_user_id
 # tumblr            : your_username.tumblr.com
+  youtube           : findemor
   twitch            : findemor
   twitter           : findemor
 # vimeo             : your_username
-  youtube           : findemor
 # keybase           : your_username
 
 
@@ -85,7 +87,7 @@ buymeacoffee:
 defaults:
   - scope:
       path: ""
-      type: "projects"
+      type: "games"
     values:
       layout: "page"
   - scope:                                              # For Documentation Only
