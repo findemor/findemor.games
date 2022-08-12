@@ -8,7 +8,7 @@ repository          : findemor/findemor.github.io     # Change to <your-username
 remote_theme        : findemor/portfolYOU
 open_new_tab        : false                             # Opens external URLs in new tab (works for posts, projects and navbar only)
     
-   
+    
 ### Plugins ###
 plugins:
   - jemoji
