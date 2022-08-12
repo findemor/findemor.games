@@ -12,7 +12,7 @@ open_new_tab        : false                             # Opens external URLs in
 ### Plugins ###
 plugins:
   - jemoji
- 
+  
 
 ### Navbar Settings ###
 nav_exclude:                                            # The following paths are excluded from navbar
