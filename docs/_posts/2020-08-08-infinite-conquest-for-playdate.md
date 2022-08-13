@@ -1,16 +1,18 @@
 ---
 title: Infinite Conquest
-tags: [Playdate]
-style: fill
+tags: [en desarrollo, PLAYDATE]
+style: border
 color: danger
 description: Conquista territorios usando la menor cantidad de rescursos. Defiende cada palmo de terreno a golpe de palanca en este juego diseñado para Playdate.
 ---
 
 Download: [Fecha prevista Q1 2023](#)
 
-![](https://cdn-images-1.medium.com/max/2000/1*pWGJIKats-zuumA3RQNEWQ.jpeg)
+![infinite conquest banner](/assets/images/uploads/infinite_conquest/infinite_conquest_playdate.gif)
 
-## Infinite Conquest
+> Defiende cada palmo de terreno a golpe de palanca en este juego diseñado para Playdate.
+
+## Game Summary
 
 Hace siglos los distintos reinos se repartían el vasto continente Chimpún en una tensa pero duradera tregua. Esto fue así hasta que llegaron los Brutérrimos, una horda de peligrosas criaturas que expulsó a los pueblos la humanidad hasta antiguos refugios y castillos aislados por el mar, donde afortunadamente no podían ser atacados.
 
