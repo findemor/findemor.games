@@ -73,13 +73,13 @@ analytics:
   google:
     tracking_id: G-3ER7E4XL4Z
 
-
+ 
 ### Buy me a coffee ###
 # See https://www.buymeacoffee.com/
 buymeacoffee:
   enabled: false
   username: your_username
-  color: "#007bff"
+  color: "#3d387d"
   message: "Thank you for visiting."                    # Message to be displayed aside from the button for a few seconds.
   description: "Support me on Buy me a coffee!"
 
