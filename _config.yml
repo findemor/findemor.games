@@ -57,7 +57,7 @@ permalink: /game/:title
 collections:
   projects:
     output: true
-    permalink: /projects/:name
+    permalink: /games/:name
   elements:                                             # For Documentation Only
     output: true                                        # For Documentation Only
  
