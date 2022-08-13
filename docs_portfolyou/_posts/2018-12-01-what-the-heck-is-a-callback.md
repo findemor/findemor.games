@@ -6,11 +6,10 @@ color: danger
 description: Learn and understand the basics of callbacks in just 6 minutes with easy examples.
 ---
 
-Download: [Brandon Morelli](https://codeburst.io/javascript-what-the-heck-is-a-callback-aba4da2deced)
+Source: [Brandon Morelli](https://codeburst.io/javascript-what-the-heck-is-a-callback-aba4da2deced)
 
 ![](https://cdn-images-1.medium.com/max/2000/1*pWGJIKats-zuumA3RQNEWQ.jpeg)
 
-![](https://www.findemor.es/img/landscape.jpg)
 ## What is a Callback?
 
 **Simply put:** A callback is a function that is to be executed **after** another function has finished executing — hence the name ‘call back’.
