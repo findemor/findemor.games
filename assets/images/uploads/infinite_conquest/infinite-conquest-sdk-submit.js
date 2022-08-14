@@ -35,7 +35,9 @@ $(document).ready(function() {
             } else {
                 console.log("submit form");
                 //window.location.href = "http://www.w3schools.com";
-                return true;
+                //return true;
+                e.preventDefault();
+                return false;
             }
         } catch (err)
         {
