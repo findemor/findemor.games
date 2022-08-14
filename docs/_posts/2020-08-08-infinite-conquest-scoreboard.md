@@ -8,7 +8,7 @@ description: Conquista territorios usando la menor cantidad de rescursos. Defien
 
 > Este es el estado actual del reino. ¡Homenajead a los reyes más poderosos!
 
-<table id="scoreboard_table" class="table table-responsive w-100 d-block d-md-table">
+<table id="scoreboard_table" class="ctable table table-responsive w-100 d-block d-md-table">
     <thead>
         <tr>
             <th scope="col">#</th>
