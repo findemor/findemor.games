@@ -17,8 +17,18 @@ $(document).ready(function() {
             e.preventDefault();
             // Here go the trick! Fire a custom event to the form
             console.log("submit");
+
+            let nick = $("#nick").val().Trim();
+            let twitter = $("#twitter").val().Trim();
+
+            if (twitter.startsWith("@")) {
+                twitter = twitter.Remove(0,1);
+            }
+
             console.log(uuid);
             console.log(mjwt);
+            console.log(nick);
+            console.log(twitter);
         } else  {
             console.log('Form still not valid');
         }
