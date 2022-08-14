@@ -20,13 +20,15 @@ $(document).ready(function() {
     $("footer").css("display", "none");
     $("div.pt-5").css("display", "none");
     $("p.post-metadata.text-muted").css("display", "none");
+
+    $("#submit").click(submitForm());
     
 
     function isEmpty(val){
         return (val === undefined || val == null || val.length <= 0) ? true : false;
     }
 
-    function submitForm(e) {
+    function submitForm() {
         console.log("try submit");
 
         try {
@@ -42,19 +44,15 @@ $(document).ready(function() {
 
             if (isEmpty(uuid) || isEmpty(mjwt) || isEmpty(nick)) {
                 console.log("preventDefault");
-                e.preventDefault();
                 return false;
             } else {
                 console.log("submit form");
                 //window.location.href = "http://www.w3schools.com";
-                //return true;
-                e.preventDefault();
-                return false;
+                return true;
             }
         } catch (err)
         {
             console.log("err: " + err);
-            e.preventDefault();
 
             return false;
         }
