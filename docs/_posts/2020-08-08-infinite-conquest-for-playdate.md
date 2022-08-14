@@ -22,6 +22,8 @@ Ahora que has sido nombrado Rey y con esta tecnología a tu alcance, es hora de 
 
 Pero ten en cuenta que la reconstrucción de tantos territorios será cara, así que deberás defender cada palmo de terreno empleando sabias táctica y demostrando habilidad, ya que quién conquiste más terreno con empleando el menor número de recursos, será el reino que se impondrá.
 
+{% include elements/button.html link="/game/infinite-conquest-scoreboard" text="SCOREBOARD" %}
+
 ## Game Outline
 
 Infinite Conquest es un juego diseñado para Playdate, una consola divertida, con tan solo 1-bit y palanca, que la hace diferente al resto al mismo tiempo que nos transmite la nostalgia de las primeras Game Boy.
@@ -31,4 +33,3 @@ Infinite Conquest es un juego diseñado para Playdate, una consola divertida, co
 <p class="text-center">
 {% include elements/button.html link="#" text="Descárgalo en itch.io" %}
 </p>
-
