@@ -170,19 +170,19 @@
 // custom
 
 .ctable {
-  margin-top: 30px;
+  margin-top: 30px !important;
 }
 
 .ctable tbody tr th {
-  background-color: white;
-  color: black;
+  background-color: white !important;
+  color: black !important;
 
 }
 
 .ctable tbody tr th.crow {
-  font-weight: bold;
+  font-weight: bold !important;
 }
 
 .ctable tbody tr th.highlight {
-  background-color: #ffc107;
+  background-color: #ffc107 !important;
 }
