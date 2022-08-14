@@ -15,4 +15,4 @@ Download: [Fecha prevista Q1 2023](#)
     <p class="greeting-content">The content is </p>
 </div>
 
-<script src="/assets/images/uploads/infinite-conquest-sdk.js"></script>
+<script src="/assets/images/uploads/infinite_conquest/infinite-conquest-sdk.js"></script>
