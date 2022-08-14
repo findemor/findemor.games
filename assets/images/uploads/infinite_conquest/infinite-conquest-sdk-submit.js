@@ -10,6 +10,12 @@ $(document).ready(function() {
         submitForm(e);
     });*/
 
+    $("nav").remove();
+    $("footer").remove();
+    $("div.pt-5").remove();
+    $("p.post-metadata.text-muted").remove();
+
+
     function isEmpty(val){
         return (val === undefined || val == null || val.length <= 0) ? true : false;
     }
