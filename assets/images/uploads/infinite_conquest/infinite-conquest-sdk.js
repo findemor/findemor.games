@@ -6,9 +6,11 @@ $(document).ready(function() {
     $.ajax({
         url: `https://infinite-conquest-api.azurewebsites.net/api/scoreboard-get?code=${ code }&top=${ top }`
     }).then(function(data) {
-        console.log(JSON.parse(data));
-        console.log(data.ranking);
-       console.log("write");
+
+        let parsed = JSON.parse(data);
+
+        console.log(parsed.ranking);
+        
         function writeRow(item, index) {
             console.log(item);
             $('#scoreboard_table > tbody').append(`
@@ -20,7 +22,7 @@ $(document).ready(function() {
                 <th>${ item.timestamp }</th>`);
         }
 
-        data.ranking.forEach(writeRow);
+        parsed.ranking.forEach(writeRow);
 
     });
 });
