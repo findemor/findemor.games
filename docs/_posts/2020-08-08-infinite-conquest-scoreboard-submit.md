@@ -6,7 +6,7 @@ color: danger
 description: Registra la puntuación de tu reino de Infinite Conquest.
 ---
 
-> Este es el estado actual del reino. ¡Homenajead a los reyes más poderosos!
+> Register your kingdgom in the hall of glory!
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="/assets/images/uploads/infinite_conquest/infinite-conquest-sdk-submit.js"></script>

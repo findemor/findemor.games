@@ -6,14 +6,23 @@ $(document).ready(function() {
     let uuid = urlParams.get('uuid');
     let mjwt = urlParams.get('mjwt');
 
-    $("button[id='submit']").click(function(){
-        submitForm();
+    $("button[id='submit']").click(function(e){
+        submitForm(e);
     });
 
-    function submitForm() {
-        console.log("submit");
-        console.log(uuid);
-        console.log(mjwt);
+    function submitForm(e) {
+
+        var form = $(this).closest('form');
+        if (!form.data("bs.validator").validate().hasErrors()) {
+            e.preventDefault();
+            // Here go the trick! Fire a custom event to the form
+            console.log("submit");
+            console.log(uuid);
+            console.log(mjwt);
+        } else  {
+            console.log('Form still not valid');
+        }
+       
     }
 
     /*
