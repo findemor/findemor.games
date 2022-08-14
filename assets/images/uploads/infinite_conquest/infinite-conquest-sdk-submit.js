@@ -21,7 +21,7 @@ $(document).ready(function() {
     $("div.pt-5").css("display", "none");
     $("p.post-metadata.text-muted").css("display", "none");
 
-    $("#submit").click(submitForm());
+    $("#submit").click(submitForm);
     
 
     function isEmpty(val){
