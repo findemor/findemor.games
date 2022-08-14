@@ -6,17 +6,18 @@ $(document).ready(function() {
     let uuid = urlParams.get('uuid');
     let mjwt = urlParams.get('mjwt');
 
-    $("button[id='submit']").click(function(e){
+    /*$("button[id='submit']").click(function(e){
         submitForm(e);
-    });
+    });*/
+
+    function isEmpty(val){
+        return (val === undefined || val == null || val.length <= 0) ? true : false;
+    }
 
     function submitForm(e) {
+        console.log("try submit");
 
-        var form = $(this).closest('form');
-        if (!form.data("bs.validator").validate().hasErrors()) {
-            e.preventDefault();
-            // Here go the trick! Fire a custom event to the form
-            console.log("submit");
+        try {
 
             let nick = $("#nick").val().Trim();
             let twitter = $("#twitter").val().Trim();
@@ -25,14 +26,24 @@ $(document).ready(function() {
                 twitter = twitter.Remove(0,1);
             }
 
-            console.log(uuid);
-            console.log(mjwt);
-            console.log(nick);
-            console.log(twitter);
-        } else  {
-            console.log('Form still not valid');
+            console.log(`uuid=${uuid}, mjwt=${mjwt}, nick=${nick}, twitter=${twitter}`);
+
+            if (isEmpty(uuid) || isEmpty(mjwt) || isEmpty(nick)) {
+                console.log("preventDefault");
+                e.preventDefault();
+                return false;
+            } else {
+                console.log("submit form");
+                //window.location.href = "http://www.w3schools.com";
+                return true;
+            }
+        } catch (err)
+        {
+            console.log("err: " + err);
+            e.preventDefault();
+
+            return false;
         }
-       
     }
 
     /*
