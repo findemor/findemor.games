@@ -18,7 +18,7 @@ $(document).ready(function() {
         console.log(parsed.ranking);
 
         function formatDate(strd) {
-            let d = Date.parse(strd);
+            let d = new Date(strd);
             return `${ d.getMonth() }/${ d.getFullYear() }`;
         }
 
