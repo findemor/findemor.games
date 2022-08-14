@@ -51,9 +51,9 @@ $(document).ready(function() {
 
         parsed.ranking.forEach(appendRow);
 
-        console.log(`found ${ found} parsed.udata.uuid [${ parsed.data.uuid }] param [${ uuid }]`);
 
         if (!found && parsed.udata) {
+            console.log(`found ${ found} parsed.udata.uuid [${ parsed.udata.uuid }] param [${ uuid }]`);
             $('#scoreboard_table > tbody').append(buildRow({ nick: "...", score: "...", level: "...", coins: "...", wasted: "...", date: "..." }));
             $('#scoreboard_table > tbody').append(buildRow({ nick: parsed.udata.nick, score: parsed.udata.score, level: parsed.udata.level, 
                 coins: parsed.udata.coins, wasted: parsed.udata.wasted, date: formatDate(parsed.udata.timestamp) }));
