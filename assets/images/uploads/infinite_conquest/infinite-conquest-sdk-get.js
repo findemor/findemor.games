@@ -37,11 +37,11 @@ $(document).ready(function() {
             
             let c = "";
             if (!found && item.uuid == uuid) {
-                c = "active"
+                c = "highlight"
             };
 
             $('#scoreboard_table > tbody').append(`<tr class="${c}">
-                <th scope="row">${ item.nick }</th>
+                <th scope="row" class="row">${ item.nick }</th>
                 <th>${ item.score }</th>
                 <th>${ item.level }</th>
                 <th>${ item.coins }</th>
@@ -51,7 +51,9 @@ $(document).ready(function() {
 
         parsed.ranking.forEach(appendRow);
 
-        if (!found) {
+        console.log(`found ${ found} parsed.udata.uuid [${ parsed.data.uuid }] param [${ uuid }]`);
+
+        if (!found && parsed.udata) {
             $('#scoreboard_table > tbody').append(buildRow({ nick: "...", score: "...", level: "...", coins: "...", wasted: "...", date: "..." }));
             $('#scoreboard_table > tbody').append(buildRow({ nick: parsed.udata.nick, score: parsed.udata.score, level: parsed.udata.level, 
                 coins: parsed.udata.coins, wasted: parsed.udata.wasted, date: formatDate(parsed.udata.timestamp) }));

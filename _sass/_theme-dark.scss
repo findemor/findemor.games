@@ -51,6 +51,7 @@ $dark-900: #17191a;
   }
 
   // Tables
+  /*
   table:not(.highlight) {
     td {
       border-color: $dark-600;
@@ -59,7 +60,7 @@ $dark-900: #17191a;
     tr:nth-child(even) {
       background-color: $dark;
     }
-  }
+  }*/
 
   // Lists
   .list-group-item-action {

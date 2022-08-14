@@ -4,7 +4,7 @@ const QUERY_KEY   = "(prefers-color-scheme: dark)";
 
 const themes = {
   LIGHT: "light",
-  DARK: "dark",
+  DARK: "light",//"dark",
 };
 
 initTheme();
@@ -14,10 +14,10 @@ function initTheme() {
 
   if (savedTheme) {
     // Storage theme
-    setTheme(savedTheme);
+    setTheme(themes.LIGHT);//savedTheme);
   } else if (window.matchMedia && window.matchMedia(QUERY_KEY).matches) {
     // system theme
-    setTheme(themes.DARK);
+    setTheme(themes.LIGHT);//themes.DARK);
   } else {
     // Default theme
     setTheme(themes.LIGHT);

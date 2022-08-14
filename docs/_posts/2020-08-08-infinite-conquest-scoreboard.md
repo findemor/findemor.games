@@ -1,5 +1,5 @@
 ---
-title: Infinite Conquest Scoreboard
+title: Infinite Conquest / Scoreboard
 tags: [PLAYDATE]
 style: border
 color: danger
@@ -10,7 +10,7 @@ Download: [Fecha prevista Q1 2023](#)
 
 ![infinite conquest banner](/assets/images/uploads/infinite_conquest/infinite_conquest_playdate.gif)
 
-<table id="scoreboard_table" class="table">
+<table id="scoreboard_table" class="table table-responsive w-100 d-block d-md-table">
     <thead>
         <tr>
             <th scope="col">King</th>
@@ -26,4 +26,4 @@ Download: [Fecha prevista Q1 2023](#)
 </table>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="/assets/images/uploads/infinite_conquest/infinite-conquest-sdk.js"></script>
+<script src="/assets/images/uploads/infinite_conquest/infinite-conquest-sdk-get.js"></script>
