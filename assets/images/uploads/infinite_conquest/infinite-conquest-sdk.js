@@ -1,9 +1,36 @@
 $(document).ready(function() {
+
+    let code = "pQcT2V0pRjiFIMmIWb-2XUfS2Rh0ueidyeEd-BrkItDKAzFuZ2BetA==";
+    let top = "1"
+
     $.ajax({
-        url: "https://infinite-conquest-api.azurewebsites.net/api/scoreboard-get?code=pQcT2V0pRjiFIMmIWb-2XUfS2Rh0ueidyeEd-BrkItDKAzFuZ2BetA==&top=1&uuid=c12bc5ad-ce28-45fa-b3d6-514ecbe8bb9f"
+        url: `https://infinite-conquest-api.azurewebsites.net/api/scoreboard-get?code=${ code }&top=${ top }`
     }).then(function(data) {
         console.log(data);
-       $('.greeting-id').append(data.id);
-       $('.greeting-content').append(data.content);
+       
+        function writeRow(item, index) {
+            $('#scoreboard_table > tbody').append(`
+                <th>${ item.nick }</th>
+                <th>${ item.score }</th>
+                <th>${ item.level }</th>
+                <th>${ item.coins }</th>
+                <th>${ item.wasted }</th>
+                <th>${ item.timestamp }</th>`);
+        }
+
+        data.ranking.forEach(writeRow)
+
     });
 });
+
+/*
+
+ranking
+<th>item.nick</th>
+<th>item.score</th>
+<th>item.level</th>
+<th>item.coins</th>
+<th>item.wasted</th>
+<th>item.timestamp</th>
+
+*/
