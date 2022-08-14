@@ -17,7 +17,21 @@ $(document).ready(function() {
 
         console.log(parsed.ranking);
 
-        function writeRow(item, index) {
+        function appendRow(item) {
+
+            let strDate = Date.parse(item.timestamp).toLocaleDateString('en-us',{day: 'numeric'});
+
+            $('#scoreboard_table > tbody').append(buildRow({
+                nick: item.nick,
+                score: item.score,
+                level: item.level,
+                coins: item.coins,
+                wasted: item.wasted,
+                date: strDate
+            }));
+        }
+
+        function buildRow(item) {
             
             let c = "";
             if (!found && item.uuid == uuid) {
@@ -30,26 +44,18 @@ $(document).ready(function() {
                 <th>${ item.level }</th>
                 <th>${ item.coins }</th>
                 <th>${ item.wasted }</th>
-                <th>${ Date.parse(item.timestamp).toString("MMMM yyyy") }</th></tr>`);
+                <th>${ item.date }</th></tr>`);
         }
 
-        parsed.ranking.forEach(writeRow);
+        parsed.ranking.forEach(appendRow);
 
         if (!found) {
-            $('#scoreboard_table > tbody').append(`<tr>
-                <th scope="row">...</th>
-                <th>...</th>
-                <th>...</th>
-                <th>...</th>
-                <th>...</th>
-                <th>...</th></tr>`);
-            $('#scoreboard_table > tbody').append(`<tr class="active">
-                <th scope="row">${ parsed.udata.nick }</th>
-                <th>${ parsed.udata.score }</th>
-                <th>${ parsed.udata.level }</th>
-                <th>${ parsed.udata.coins }</th>
-                <th>${ parsed.udata.wasted }</th>
-                <th>${ Date.parse(parsed.udata.timestamp).toString("MMMM yyyy") }</th></tr>`);
+
+            let strDate = Date.parse(parsed.udata.timestamp).toLocaleDateString('en-us',{day: 'numeric'});
+
+            $('#scoreboard_table > tbody').append(buildRow({ nick: "...", score: "...", level: "...", coins: "...", wasted: "...", date: "..." }));
+            $('#scoreboard_table > tbody').append(buildRow({ nick: parsed.udata.nick, score: parsed.udata.score, level: parsed.udata.level, 
+                coins: parsed.udata.coins, wasted: parsed.udata.wasted, date: strDate }));
         }
 
     });
