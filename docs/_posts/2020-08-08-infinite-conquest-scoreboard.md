@@ -10,15 +10,15 @@ Download: [Fecha prevista Q1 2023](#)
 
 ![infinite conquest banner](/assets/images/uploads/infinite_conquest/infinite_conquest_playdate.gif)
 
-<table id="scoreboard_table">
+<table id="scoreboard_table" class="table">
     <thead>
         <tr>
-            <th>King</th>
-            <th>Score</th>
-            <th>Territories</th>
-            <th>Coins</th>
-            <th>Spent</th>
-            <th>Date</th>
+            <th scope="col">King</th>
+            <th scope="col">Score</th>
+            <th scope="col">Territories</th>
+            <th scope="col">Coins</th>
+            <th scope="col">Spent</th>
+            <th scope="col">Date</th>
         </tr>
     </thead>
     <tbody>
