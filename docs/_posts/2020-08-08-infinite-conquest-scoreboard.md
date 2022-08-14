@@ -6,9 +6,7 @@ color: danger
 description: Conquista territorios usando la menor cantidad de rescursos. Defiende cada palmo de terreno a golpe de palanca en este juego diseñado para Playdate.
 ---
 
-Download: [Fecha prevista Q1 2023](#)
-
-![infinite conquest banner](/assets/images/uploads/infinite_conquest/infinite_conquest_playdate.gif)
+> Este es el estado actual del reino. ¡Homenajead a los reyes más poderosos!
 
 <table id="scoreboard_table" class="table table-responsive w-100 d-block d-md-table">
     <thead>
@@ -28,3 +26,9 @@ Download: [Fecha prevista Q1 2023](#)
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="/assets/images/uploads/infinite_conquest/infinite-conquest-sdk-get.js"></script>
+
+## Acerca de Infinite Conquest para Playdate
+
+[Página principal del juego](/game/infinite-conquest-for-playdate)
+
+![infinite conquest banner](/assets/images/uploads/infinite_conquest/infinite_conquest_playdate.gif)

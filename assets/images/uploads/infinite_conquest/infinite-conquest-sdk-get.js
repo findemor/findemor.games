@@ -43,6 +43,11 @@ $(document).ready(function() {
                 c = "class=\"highlight\"";
             };
 
+            let king = item.nick;
+            if (item.twitter) {
+                king = `<a href="https://www.twitter.com/${ item.twitter }" target="_blank">${ item.nick  }</a>`;
+            }
+
             $('#scoreboard_table > tbody').append(`<tr ${c}>
                 <th>${ i }</th>
                 <th scope="row" class="crow">${ item.nick }</th>
@@ -59,7 +64,7 @@ $(document).ready(function() {
         if (!found && parsed.udata) {
             //console.log(`found ${ found} parsed.udata.uuid [${ parsed.udata.uuid }] param [${ uuid }]`);
             $('#scoreboard_table > tbody').append(buildRow("", { nick: "...", score: "...", level: "...", coins: "...", wasted: "...", date: "..." }));
-            $('#scoreboard_table > tbody').append(buildRow("", { nick: parsed.udata.nick, score: parsed.udata.score, level: parsed.udata.level, 
+            $('#scoreboard_table > tbody').append(buildRow("", { nick: parsed.udata.nick, twitter: parsed.udata.twitter, score: parsed.udata.score, level: parsed.udata.level, 
                 coins: parsed.udata.coins, wasted: parsed.udata.wasted, uuid: parsed.udata.uuid, date: formatDate(parsed.udata.timestamp) }));
         }
 

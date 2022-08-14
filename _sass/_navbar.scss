@@ -176,13 +176,13 @@
 .ctable tbody tr th {
   background-color: white !important;
   color: black !important;
-
+  padding: 5px !important;
 }
 
 .ctable tbody tr th.crow {
   font-weight: bold !important;
 }
 
-.ctable tbody tr th.highlight {
+.ctable tbody tr.highlight th {
   background-color: #ffc107 !important;
 }
