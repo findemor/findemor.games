@@ -13,6 +13,7 @@ Download: [Fecha prevista Q1 2023](#)
 <table id="scoreboard_table" class="table table-responsive w-100 d-block d-md-table">
     <thead>
         <tr>
+            <th scope="col">#</th>
             <th scope="col">King</th>
             <th scope="col">Score</th>
             <th scope="col">Territories</th>

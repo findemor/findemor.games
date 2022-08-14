@@ -22,8 +22,10 @@ $(document).ready(function() {
             return `${ d.getMonth() }/${ d.getFullYear() }`;
         }
 
-        function appendRow(item) {
-            $('#scoreboard_table > tbody').append(buildRow({
+        function appendRow(item, index) {
+            $('#scoreboard_table > tbody').append(buildRow(
+            index + 1,
+            {
                 nick: item.nick,
                 score: item.score,
                 level: item.level,
@@ -33,7 +35,7 @@ $(document).ready(function() {
             }));
         }
 
-        function buildRow(item) {
+        function buildRow(i, item) {
             
             let c = "";
             if (!found && item.uuid == uuid) {
@@ -41,6 +43,7 @@ $(document).ready(function() {
             };
 
             $('#scoreboard_table > tbody').append(`<tr class="${c}">
+                <th>${ i }</th>
                 <th scope="row" class="row">${ item.nick }</th>
                 <th>${ item.score }</th>
                 <th>${ item.level }</th>
@@ -54,8 +57,8 @@ $(document).ready(function() {
 
         if (!found && parsed.udata) {
             console.log(`found ${ found} parsed.udata.uuid [${ parsed.udata.uuid }] param [${ uuid }]`);
-            $('#scoreboard_table > tbody').append(buildRow({ nick: "...", score: "...", level: "...", coins: "...", wasted: "...", date: "..." }));
-            $('#scoreboard_table > tbody').append(buildRow({ nick: parsed.udata.nick, score: parsed.udata.score, level: parsed.udata.level, 
+            $('#scoreboard_table > tbody').append(buildRow("", { nick: "...", score: "...", level: "...", coins: "...", wasted: "...", date: "..." }));
+            $('#scoreboard_table > tbody').append(buildRow("",{ nick: parsed.udata.nick, score: parsed.udata.score, level: parsed.udata.level, 
                 coins: parsed.udata.coins, wasted: parsed.udata.wasted, date: formatDate(parsed.udata.timestamp) }));
         }
 
