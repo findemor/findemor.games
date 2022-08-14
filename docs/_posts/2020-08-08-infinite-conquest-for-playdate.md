@@ -14,15 +14,16 @@ Download: [Fecha prevista Q1 2023](#)
 
 ## Game Summary
 
-Hace siglos los distintos reinos se repartían el vasto continente Chimpún en una tensa pero duradera tregua. Esto fue así hasta que llegaron los Brutérrimos, una horda de peligrosas criaturas que expulsó a los pueblos la humanidad hasta antiguos refugios y castillos aislados por el mar, donde afortunadamente no podían ser atacados.
+Hace siglos los distintos reinos se repartían el vasto continente Chimpún en una tensa pero duradera tregua. Esto fue así hasta que llegaron los Brutérrimos, una horda de peligrosas criaturas que expulsó a los pueblos humanos hasta antiguos refugios y castillos aislados por el mar, donde afortunadamente no podían ser atacados.
 
 Durante años, los mejores cientificos e ingenieros han desarrollado nuevas armas: los Chinarcos capaces de herir a los Brutérrimos, y los Poñones, que podrían romper sus gruesas armaduras.
 
-Ahora que has sido nombrado Rey y con esta tecnología a tu alcance, es hora de salir ahí fuera y reclamar algo de espacio para que tus ciudadanos puedan estirar las piernas.
+Ahora que has sido nombrado Rey y con esta nueva tecnología a tu alcance, es hora de salir ahí fuera y reclamar algo de espacio para que tus ciudadanos puedan estirar las piernas.
 
-Pero ten en cuenta que la reconstrucción de tantos territorios será cara, así que deberás defender cada palmo de terreno empleando sabias táctica y demostrando habilidad, ya que quién conquiste más terreno con empleando el menor número de recursos, será el reino que se impondrá.
+Pero ten en cuenta que la reconstrucción de tantos territorios será cara, así que deberás defender cada palmo de terreno empleando sabias tácticas y demostrando tu habilidad, ya que quién conquiste más terreno con empleando el menor número de recursos, será el Rey que se impondrá.
+
 <p class="text-center">
-{% include elements/button.html link="/game/infinite-conquest-scoreboard" text="SCOREBOARD" %}
+{% include elements/button.html link="/game/infinite-conquest-scoreboard" text="VER EL ESTADO DEL REINO" %}
 </p>
 
 ## Game Outline

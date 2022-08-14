@@ -29,7 +29,8 @@ description: Conquista territorios usando la menor cantidad de rescursos. Defien
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="/assets/images/uploads/infinite_conquest/infinite-conquest-sdk-get.js"></script>
 
-## Infinite Conquest para Playdate
+  
+    
 
 <p class="text-center">
 {% include elements/button.html link="/game/infinite-conquest-for-playdate" text="Página principal del juego" %}
