@@ -39,7 +39,7 @@ $(document).ready(function() {
             
             let c = "";
             console.log(`[${ item.uuid}] [${ uuid }] == ${ (item.uuid == uuid) }`);
-            if (item.uuid == uuid) {
+            if (uuid && item.uuid == uuid) {
                 c = "class=\"highlight\"";
             };
 
