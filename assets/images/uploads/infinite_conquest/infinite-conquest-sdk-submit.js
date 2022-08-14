@@ -7,16 +7,16 @@ $(document).ready(function() {
         submitForm(e);
     });*/
 
-    /*
+    
     $("nav").remove();
- */   $("footer").remove();
+    $("footer").remove();
     $("div.pt-5").remove();
-    $("p.post-metadata.text-muted").remove();
+    //$("p.post-metadata.text-muted").remove();
  
-    $("nav").css("display", "none");
- /*   $("footer").css("display", "none");
-    $("div.pt-5").css("display", "none");
-    $("p.post-metadata.text-muted").css("display", "none");*/
+    /*$("nav").css("display", "none");
+    $("footer").css("display", "none");
+    $("div.pt-5").css("display", "none");*/
+    $("p.post-metadata.text-muted").css("display", "none");
 
     $("#submit").click(submitForm);
     
@@ -45,7 +45,7 @@ $(document).ready(function() {
 
     function submitForm() {
         //console.log("try submit");
-        //eyJzY29yZSI6IjEiLCJ1dWlkIjoiYzFhZGEzNDUtOTY0YS00OTExLWJmNGEtZWExOWNjZmNmYjA0IiwibGV2ZWwiOiIxIiwiY29pbnMiOiI1Iiwid2FzdGVkIjoiMyJ9.WVo2I0VkaiZ6JEZoNk5PMDUwTEc2VyhFeCNaWTA7d1ppI2kyd2k1Yk8xJHdkajV5JUo5OzUlIyg=
+        //
         try {
 
             let nick = $("#nick").val().trim();
