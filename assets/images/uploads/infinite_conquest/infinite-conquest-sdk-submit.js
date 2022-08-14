@@ -33,8 +33,8 @@ $(document).ready(function() {
 
         try {
 
-            let nick = $("#nick").val().Trim();
-            let twitter = $("#twitter").val().Trim();
+            let nick = $("#nick").val().trim();
+            let twitter = $("#twitter").val().trim();
 
             if (twitter.startsWith("@")) {
                 twitter = twitter.Remove(0,1);
