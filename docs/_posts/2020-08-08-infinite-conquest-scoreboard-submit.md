@@ -1,5 +1,5 @@
 ---
-title: Infinite Conquest / Scoreboard
+title: Infinite Conquest / Submit score
 tags: [PLAYDATE]
 style: border
 color: danger
@@ -9,7 +9,7 @@ description: Registra la puntuación de tu reino de Infinite Conquest.
 > Este es el estado actual del reino. ¡Homenajead a los reyes más poderosos!
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="/assets/images/uploads/infinite_conquest/infinite-conquest-sdk-put.js"></script>
+<script src="/assets/images/uploads/infinite_conquest/infinite-conquest-sdk-submit.js"></script>
 
 <form class="needs-validation">
   <div class="form-group">
@@ -28,5 +28,5 @@ description: Registra la puntuación de tu reino de Infinite Conquest.
     <input type="text" class="form-control" id="twitter" placeholder="username">
     <small id="twitterHelp" class="form-text text-muted">(Optional) Your King name will become a link to your twitter timeline.</small>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button id="submit" type="submit" class="btn btn-primary">Submit your score</button>
 </form>
