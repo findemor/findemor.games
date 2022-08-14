@@ -12,6 +12,8 @@ $(document).ready(function() {
 
     function submitForm() {
         console.log("submit");
+        console.log(uuid);
+        console.log(mjwt);
     }
 
     /*
