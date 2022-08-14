@@ -17,17 +17,19 @@ $(document).ready(function() {
 
         console.log(parsed.ranking);
 
+        function formatDate(strd) {
+            let d = Date.parse(strd);
+            return `${ d.getMonth() }/${ d.getFullYear() }`;
+        }
+
         function appendRow(item) {
-
-            let strDate = Date.parse(item.timestamp).toLocaleDateString('en-us',{day: 'numeric'});
-
             $('#scoreboard_table > tbody').append(buildRow({
                 nick: item.nick,
                 score: item.score,
                 level: item.level,
                 coins: item.coins,
                 wasted: item.wasted,
-                date: strDate
+                date: formatDate(item.timestamp)
             }));
         }
 
@@ -50,12 +52,9 @@ $(document).ready(function() {
         parsed.ranking.forEach(appendRow);
 
         if (!found) {
-
-            let strDate = Date.parse(parsed.udata.timestamp).toLocaleDateString('en-us',{day: 'numeric'});
-
             $('#scoreboard_table > tbody').append(buildRow({ nick: "...", score: "...", level: "...", coins: "...", wasted: "...", date: "..." }));
             $('#scoreboard_table > tbody').append(buildRow({ nick: parsed.udata.nick, score: parsed.udata.score, level: parsed.udata.level, 
-                coins: parsed.udata.coins, wasted: parsed.udata.wasted, date: strDate }));
+                coins: parsed.udata.coins, wasted: parsed.udata.wasted, date: formatDate(parsed.udata.timestamp) }));
         }
 
     });
