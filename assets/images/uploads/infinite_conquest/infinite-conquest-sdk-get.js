@@ -38,11 +38,12 @@ $(document).ready(function() {
         function buildRow(i, item) {
             
             let c = "";
-            if (!found && item.uuid == uuid) {
-                c = "highlight"
+            console.log(`[${ item.uuid}] [${ uuid }] == ${ (item.uuid == uuid) }`);
+            if (item.uuid == uuid) {
+                c = "class=\"highlight\"";
             };
 
-            $('#scoreboard_table > tbody').append(`<tr class="${c}">
+            $('#scoreboard_table > tbody').append(`<tr ${c}>
                 <th>${ i }</th>
                 <th scope="row" class="crow">${ item.nick }</th>
                 <th>${ item.score }</th>
