@@ -29,4 +29,8 @@ description: Registra la puntuación de tu reino de Infinite Conquest.
     <small id="twitterHelp" class="form-text text-muted">(Optional) Your King name will become a link to your twitter timeline.</small>
   </div>
   <button id="submit" type="submit" class="btn btn-primary">Submit your score</button>
+  
 </form>
+<div id="displayError" class="invalid-feedback" style="display: none;">
+  This page appears to not be correctly signed. This form is only valid if you have been redirected from the Playdate game. If you did but still not working, please contact with the [game developer](https://www.twitter.com/findemor).
+</div>

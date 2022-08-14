@@ -8,15 +8,16 @@ $(document).ready(function() {
     });*/
 
     
-    $("nav").remove();
-    $("footer").remove();
-    $("div.pt-5").remove();
+    //$("nav").remove();
+    //$("footer").remove();
+    //$("div.pt-5").remove();
     //$("p.post-metadata.text-muted").remove();
  
-    /*$("nav").css("display", "none");
+    $("nav").css("display", "none");
     $("footer").css("display", "none");
-    $("div.pt-5").css("display", "none");*/
+    $("div.pt-5").css("display", "none");
     $("p.post-metadata.text-muted").css("display", "none");
+    $("#displayError").css("display", "none");
 
     $("#submit").click(submitForm);
     
@@ -47,7 +48,7 @@ $(document).ready(function() {
         //console.log("try submit");
         //
         try {
-
+            $("#displayError").css("display", "none");
             let nick = $("#nick").val().trim();
             let twitter = $("#twitter").val().trim();
             let uuid = JSON.parse(atob(mjwt.split('.')[0])).uuid;
@@ -59,12 +60,14 @@ $(document).ready(function() {
             if (isEmpty(uuid) || isEmpty(mjwt) || isEmpty(nick)) {
                 console.log(`uuid=${uuid}, mjwt=${mjwt}, nick=${nick}, twitter=${twitter}`);
                 //console.log("preventDefault");
+                $("#displayError").css("display", "block");
                 return false;
             } else {
                 //console.log("submit form");
                 putData(mjwt, nick, twitter, (err, data) => {
                     if (err) {
                         console.log(err);
+                        $("#displayError").css("display", "block");
                         return false;
                     } else {
                         //vamos al scoreboard
