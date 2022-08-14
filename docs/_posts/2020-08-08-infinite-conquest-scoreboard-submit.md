@@ -32,5 +32,5 @@ description: Registra la puntuación de tu reino de Infinite Conquest.
   
 </form>
 <div id="displayError" class="invalid-feedback" style="display: none;">
-  This page appears to not be correctly signed. This form is only valid if you have been redirected from the Playdate game. If you did but still not working, please contact with the [game developer](https://www.twitter.com/findemor).
+  This page appears to not be correctly signed. This form is only valid if you have been redirected from the Playdate game. If you did but still not working, please contact with the <a href="https://www.twitter.com/findemor" target="_blank">game developer</a>.
 </div>

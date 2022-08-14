@@ -17,7 +17,12 @@ $(document).ready(function() {
     $("footer").css("display", "none");
     $("div.pt-5").css("display", "none");
     $("p.post-metadata.text-muted").css("display", "none");
-    $("#displayError").css("display", "none");
+
+    if (isEmpty(mjwt)) {
+        $("#displayError").css("display", "block");
+    }else {
+        $("#displayError").css("display", "none");
+    }
 
     $("#submit").click(submitForm);
     
@@ -57,9 +62,11 @@ $(document).ready(function() {
                 twitter = twitter.Remove(0,1);
             }
 
-            if (isEmpty(uuid) || isEmpty(mjwt) || isEmpty(nick)) {
+            if (isEmpty(nick)) {
                 console.log(`uuid=${uuid}, mjwt=${mjwt}, nick=${nick}, twitter=${twitter}`);
-                //console.log("preventDefault");
+                return false;
+            } else if (isEmpty(uuid) || isEmpty(mjwt)) {
+                console.log(`uuid=${uuid}, mjwt=${mjwt}, nick=${nick}, twitter=${twitter}`);
                 $("#displayError").css("display", "block");
                 return false;
             } else {
@@ -79,7 +86,7 @@ $(document).ready(function() {
         } catch (err)
         {
             console.log("err: " + err);
-
+            
             return false;
         }
     }
