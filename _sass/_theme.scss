@@ -4,7 +4,7 @@
   }
 
   [data-theme="dark"] & {
-    #{$property}: $dark-value;
+    #{$property}: $light-value;
   }
 }
 
