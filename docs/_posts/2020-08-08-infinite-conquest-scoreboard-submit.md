@@ -14,7 +14,7 @@ description: Registra la puntuación de tu reino de Infinite Conquest.
 <form class="needs-validation">
   <div class="form-group">
     <label for="nick">King name</label>
-    <input type="text" class="form-control" id="nick" aria-describedby="nick" placeholder="King name" required>
+    <input type="text" class="form-control" id="nick" aria-describedby="nick" placeholder="King name" required maxlength="16">
     <small id="nickHelp" class="form-text text-muted">This name will be displayed publicly along with your score.</small>
     <div class="invalid-feedback">
         Please choose your name.

@@ -186,3 +186,10 @@
 .ctable tbody tr.highlight th {
   background-color: #ffc107 !important;
 }
+
+.ctable tbody tr.highlight th a {
+  color: #000000 !important;
+}
+.ctable tbody tr.highlight th a:hover {
+  color: $primary !important;
+}

@@ -50,14 +50,33 @@ $(document).ready(function() {
         });
     }
 
+        
+    function removeHtml(str) {
+        const htmlEntities = {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&apos;"
+        };
+        return str.replace(/([&<>\"'])/g, match => htmlEntities[match]);
+    }
+    
     function processForm(callback)
     {
         try {
             $('#submit').attr('disabled' , true);
             $("#displayError").css("display", "none");
             let nick = $("#nick").val().trim();
+            if (nick.length > 16) {
+                nick = nick.substring(0, 15);
+            }
             let twitter = $("#twitter").val().trim();
             let uuid = JSON.parse(atob(mjwt.split('.')[0])).uuid;
+
+            //remove injection
+            nick = removeHtml(nick);
+            twitter = removeHtml(twitter);
 
             if (twitter.startsWith("@")) {
                 twitter = twitter.Remove(0,1);
