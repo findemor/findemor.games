@@ -25,6 +25,7 @@ $(document).ready(function() {
     }
 
     $("#submit").click(submitForm);
+    $('#submit').attr('disabled' , false);
     
 
     function isEmpty(val){
@@ -49,10 +50,10 @@ $(document).ready(function() {
         });
     }
 
-    function submitForm() {
-        //console.log("try submit");
-        //
+    function processForm(callback)
+    {
         try {
+            $('#submit').attr('disabled' , true);
             $("#displayError").css("display", "none");
             let nick = $("#nick").val().trim();
             let twitter = $("#twitter").val().trim();
@@ -64,31 +65,41 @@ $(document).ready(function() {
 
             if (isEmpty(nick)) {
                 console.log(`uuid=${uuid}, mjwt=${mjwt}, nick=${nick}, twitter=${twitter}`);
-                return false;
+                callback("nick param is null");
             } else if (isEmpty(uuid) || isEmpty(mjwt)) {
                 console.log(`uuid=${uuid}, mjwt=${mjwt}, nick=${nick}, twitter=${twitter}`);
                 $("#displayError").css("display", "block");
-                return false;
+                callback("mandatory param is null");
             } else {
                 //console.log("submit form");
                 putData(mjwt, nick, twitter, (err, data) => {
                     if (err) {
                         console.log(err);
                         $("#displayError").css("display", "block");
-                        return false;
+                        callback(err);
                     } else {
                         //vamos al scoreboard
-                        window.location.href = `https://games.findemor.es/game/infinite-conquest-scoreboard?uuid=${uuid}`;
-                        return true;
+                        callback();
                     }
                 });
+                return false;
             }
         } catch (err)
         {
             console.log("err: " + err);
-            
-            return false;
+            callback(err);
         }
+    }
+
+    function submitForm() {
+        $('#submit').attr('disabled' , true);
+        processForm((err) => {
+            $('#submit').attr('disabled' , false);
+            if (!err) {
+                window.location.href = `https://games.findemor.es/game/infinite-conquest-scoreboard?uuid=${uuid}`;
+            }
+        });
+        return false;
     }
 
 });
