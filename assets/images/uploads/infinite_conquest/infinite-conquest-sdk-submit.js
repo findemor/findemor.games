@@ -35,8 +35,8 @@ $(document).ready(function() {
     function putData(mjwt, nick, twitter, callback) {
 
         let code = "lMfZO5wtqhOhSJdRUAblqC1hpDBlmfaVle5Om1-YiQhYAzFu5I9sNw==";
-        let qpnick = encodeURI(nick);
-        let qptwitter = isEmpty(twitter) ? "" : "&twitter="+encodeURI(twitter);
+        let qpnick = encodeURIComponent(nick);
+        let qptwitter = isEmpty(twitter) ? "" : "&twitter="+encodeURIComponent(twitter);
         
         $.ajax({
             url: `https://infinite-conquest-api.azurewebsites.net/api/scoreboard-put?code=${ code }&mjwt=${ mjwt }&nick=${ qpnick }${ qptwitter }`
