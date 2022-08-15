@@ -53,7 +53,7 @@ $(document).ready(function() {
 
             $('#scoreboard_table > tbody').append(`<tr ${c}>
                 <th>${ i }</th>
-                <th scope="row" class="crow">${ item.nick }</th>
+                <th scope="row" class="crow">${ king }</th>
                 <th>${ item.score }</th>
                 <th>${ item.level }</th>
                 <th>${ item.coins }</th>
