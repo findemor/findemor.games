@@ -79,7 +79,7 @@ $(document).ready(function() {
                         callback(err);
                     } else {
                         //vamos al scoreboard
-                        callback();
+                        callback(null, { uuid });
                     }
                 });
                 return false;
@@ -93,10 +93,10 @@ $(document).ready(function() {
 
     function submitForm() {
         $('#submit').attr('disabled' , true);
-        processForm((err) => {
+        processForm((err, data) => {
             $('#submit').attr('disabled' , false);
             if (!err) {
-                window.location.href = `https://games.findemor.es/game/infinite-conquest-scoreboard?uuid=${uuid}`;
+                window.location.href = `https://games.findemor.es/game/infinite-conquest-scoreboard?uuid=${data.uuid}`;
             }
         });
         return false;
