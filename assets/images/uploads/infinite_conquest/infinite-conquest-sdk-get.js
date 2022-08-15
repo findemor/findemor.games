@@ -26,7 +26,9 @@ $(document).ready(function() {
             $('#scoreboard_table > tbody').append(buildRow(
             index + 1,
             {
+                uuid: item.uuid,
                 nick: item.nick,
+                twitter: item.twitter,
                 score: item.score,
                 level: item.level,
                 coins: item.coins,
