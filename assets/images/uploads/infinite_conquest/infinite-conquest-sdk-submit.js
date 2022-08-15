@@ -69,7 +69,7 @@ $(document).ready(function() {
             $("#displayError").css("display", "none");
             let nick = $("#nick").val().trim();
             if (nick.length > 16) {
-                nick = nick.substring(0, 15);
+                nick = nick.substring(0, 16);
             }
             let twitter = $("#twitter").val().trim();
             let uuid = JSON.parse(atob(mjwt.split('.')[0])).uuid;

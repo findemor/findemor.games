@@ -61,6 +61,8 @@ $(document).ready(function() {
                 <th>${ item.date }</th></tr>`);
         }
 
+        $('p.loadinggif').remove()
+
         parsed.ranking.forEach(appendRow);
 
 

@@ -25,6 +25,7 @@ description: Conquista territorios usando la menor cantidad de rescursos. Defien
     <tbody>
     </tbody>
 </table>
+{% include elements/loading.html %}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="/assets/images/uploads/infinite_conquest/infinite-conquest-sdk-get.js"></script>
