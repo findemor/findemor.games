@@ -79,7 +79,7 @@ $(document).ready(function() {
             twitter = removeHtml(twitter);
 
             if (twitter.startsWith("@")) {
-                twitter = twitter.substring(1,twitter.length - 1);
+                twitter = twitter.substring(1,twitter.length);
             }
 
             if (isEmpty(nick)) {
