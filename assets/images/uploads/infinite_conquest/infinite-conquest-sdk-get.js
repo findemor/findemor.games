@@ -17,6 +17,11 @@ $(document).ready(function() {
 
         console.log(parsed.ranking);
 
+        function writeEncodedForSafety(message) {
+            var encodedMsg = $('<div />').text(message).html();
+            return encodedMsg;//element.html(encodedMsg);
+        }
+
         function formatDate(strd) {
             let d = new Date(strd);
             return `${ d.getMonth() }/${ d.getFullYear() }`;
@@ -46,9 +51,9 @@ $(document).ready(function() {
                 c = "class=\"highlight\"";
             };
 
-            let king = item.nick;
+            let king = writeEncodedForSafety(item.nick);
             if (item.twitter) {
-                king = `<a href="https://www.twitter.com/${ item.twitter }" target="_blank">${ item.nick  }</a>`;
+                king = `<a href="https://www.twitter.com/${ writeEncodedForSafety(item.twitter) }" target="_blank">${ king  }</a>`;
             }
 
             $('#scoreboard_table > tbody').append(`<tr ${c}>
