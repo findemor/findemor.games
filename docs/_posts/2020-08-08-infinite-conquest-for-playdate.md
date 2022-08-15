@@ -35,3 +35,11 @@ Infinite Conquest es un juego diseñado para Playdate, una consola divertida, co
 <p class="text-center">
 {% include elements/button.html link="#" text="Descárgalo en itch.io" %}
 </p>
+
+## Comments
+
+{% if page.comments %}
+<div class="pt-5">
+  {% include blog/disqus.html %}
+</div>
+{% endif %}
